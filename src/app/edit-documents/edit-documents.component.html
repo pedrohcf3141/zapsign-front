@@ -1,0 +1,67 @@
+<div class="container-xl">
+    <div class="table-responsive">
+      <div class="table-wrapper">
+        <div class="table-title">
+          <div class="row">
+            <div class="col-sm-6">
+              <h4><b>Update Document</b></h4>
+            </div>
+            <div class="col-sm-6">
+              <a href="#" routerLink="/Home" class="btn btn-success back"><i class='fas fa-arrow-circle-left'></i>
+                 Back</a>
+            </div>
+          </div>
+        </div>
+        <form #documentForm="ngForm">
+          <div class="table-content">
+            <div class="form-group p-10 row">
+              <div class="col-sm-3">
+                <label for="Name" class="p-t-b-10">Name<span class="requiredStar">*</span></label>
+              </div>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="Name" required maxlength="255"
+                  [(ngModel)]="editDocumentForm.Name" name="Name" #Name="ngModel">
+                <div *ngIf="Name.errors && isSubmitted" class="alert alert-danger validationError">
+                  <div [hidden]="!Name.errors?.['required']">
+                    Name is required
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group p-10 row">
+              <div class="col-sm-3">
+                <label for="Status" class="p-t-b-10">Status<span class="requiredStar">*</span></label>
+              </div>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="Status" required maxlength="255"
+                  [(ngModel)]="editDocumentForm.Status" name="Status" #Status="ngModel">
+                <div *ngIf="Status.errors && isSubmitted" class="alert alert-danger validationError">
+                  <div [hidden]="!Status.errors?.['required']">
+                    Status is required
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group p-10 row">
+              <div class="col-sm-3">
+                <label for="Company" class="p-t-b-10">Company<span class="requiredStar">*</span></label>
+              </div>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="Company" required maxlength="255"
+                  [(ngModel)]="editDocumentForm.Company" name="Company" #Company="ngModel">
+                <div *ngIf="Company.errors && isSubmitted" class="alert alert-danger validationError">
+                  <div [hidden]="!Company.errors?.['required']">
+                    Company is required
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="table-footer">
+            <button class="btn btn-success" (click)="EditDocument(documentForm.form.valid)">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

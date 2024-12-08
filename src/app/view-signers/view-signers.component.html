@@ -1,0 +1,43 @@
+<div class="container-xl">
+    <div class="table-responsive">
+      <div class="table-wrapper">
+        <div class="table-title">
+          <div class="row">
+            <div class="col-sm-6">
+              <h4><b>View Signer</b></h4>
+            </div>
+            <div class="col-sm-6">
+              <a href="#" routerLink="/Home" class="btn btn-success back"><i class="fas fa-arrow-circle-left"></i> Back</a>
+            </div>
+          </div>
+        </div>
+        <div class="table-content">
+          <table class="table table-striped table-hover table-bordered">
+            <tbody>
+              <tr>
+                <td><label><b>Name</b></label></td>
+                <td><span>{{ signerDetail.name }}</span></td>
+              </tr>
+              <tr>
+                <td><label><b>Email</b></label></td>
+                <td><span>{{ signerDetail.email }}</span></td>
+              </tr>
+              <tr>
+                <td><label><b>Status</b></label></td>
+                <td><span>{{ signerDetail.status }}</span></td>
+              </tr>
+              <tr>
+                <td><label><b>Token</b></label></td>
+                <td><span>{{ signerDetail.token }}</span></td>
+              </tr>
+              <tr>
+                <td><label><b>Document ID</b></label></td>
+                <td><span>{{ signerDetail.document ? signerDetail.document.id : 'N/A' }}</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  

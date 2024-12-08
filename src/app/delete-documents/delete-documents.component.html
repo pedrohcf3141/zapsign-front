@@ -1,0 +1,46 @@
+<div class="container-xl">
+    <div class="table-responsive">
+      <div class="table-wrapper">
+        <div class="table-title">
+          <div class="row">
+            <div class="col-sm-6">
+              <h4><b>Delete Document</b></h4>
+            </div>
+            <div class="col-sm-6">
+              <a href="#" routerLink="/Home" class="btn btn-success back"><i class="fas fa-arrow-circle-left"></i> Back</a>
+            </div>
+          </div>
+        </div>
+        <div class="table-content">
+          <div class="form-group p-10 row">
+            <div class="col-sm-3">
+              <label><b>Name</b></label>
+            </div>
+            <div class="col-sm-9">
+              <span>{{ documentDetail.name }}</span>
+            </div>
+          </div>
+          <div class="form-group p-10 row">
+            <div class="col-sm-3">
+              <label><b>Status</b></label>
+            </div>
+            <div class="col-sm-9">
+              <span>{{ documentDetail.status }}</span>
+            </div>
+          </div>
+          <div class="form-group p-10 row">
+            <div class="col-sm-3">
+              <label><b>Company</b></label>
+            </div>
+            <div class="col-sm-9">
+              <span>{{ documentDetail.company }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="table-footer">
+          <button class="btn btn-danger" (click)="deleteDocument()">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
